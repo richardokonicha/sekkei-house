@@ -2,9 +2,9 @@
   "private": true,
   "name": "sekkei-house",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "node init && next dev",
+    "build": "node init && next build",
+    "start": "node init && next start",
     "lint": "next lint",
     "check-types": "tsc --noEmit",
     "seed:products": "tsx supabase/seed/seed-products.ts",

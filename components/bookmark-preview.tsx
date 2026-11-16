@@ -127,7 +127,7 @@ export function BookmarkPreview({
           fullScreen ? "min-h-0" : "min-h-[45dvh] sm:min-h-[420px]"
         )}
       >
-        <AnimatePresence mode="wait" initial={false}>
+        <AnimatePresence mode="wait">
           {showCode ? (
             <motion.div
               key="code"
