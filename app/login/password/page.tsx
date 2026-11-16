@@ -2,17 +2,24 @@
 
 import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
+
 import { createClient } from "@/db/supabase/client"
 
 import { ChangePassword } from "./form"
 
-export default function ChangePasswordPage() {
-  const supabase = createClient()
-  const [loading, setLoading] = useState(true)
+const isLocalDataMode = process.env.NEXT_PUBLIC_USE_LOCAL_DATA === "true"
 
+export default function ChangePasswordPage() {
+  const [loading, setLoading] = useState(true)
   const router = useRouter()
 
   useEffect(() => {
+    if (isLocalDataMode) {
+      router.replace("/")
+      return
+    }
+
+    const supabase = createClient()
     ;(async () => {
       const session = (await supabase.auth.getSession()).data.session
 
@@ -22,7 +29,7 @@ export default function ChangePasswordPage() {
         setLoading(false)
       }
     })()
-  }, [])
+  }, [router])
 
   if (loading) {
     return null

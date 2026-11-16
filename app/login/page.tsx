@@ -1,12 +1,20 @@
 import Link from "next/link"
+import { redirect } from "next/navigation"
 
+import { useLocalData } from "@/lib/local-data"
 import { LoginForm } from "./form"
+
+export const dynamic = "force-dynamic"
 
 export default async function LoginPage({
   searchParams,
 }: {
   searchParams: { message: string }
 }) {
+  if (useLocalData) {
+    return redirect("/")
+  }
+
   return (
     <div>
       <div className="absolute left-2 top-2">

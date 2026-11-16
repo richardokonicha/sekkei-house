@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { usePathname, useSearchParams } from "next/navigation"
-import { Box, Home, Search } from "lucide-react"
+import { Box, Github, Home, Search } from "lucide-react"
 import { motion } from "framer-motion"
 
 import { cn } from "@/lib/utils"
@@ -135,7 +135,18 @@ export function NavSidebar({
       <div className="border-t border-zinc-200/80 p-3 dark:border-zinc-800/80">
         <div className="flex items-center justify-between px-2">
           <span className="text-xs text-zinc-500">Local mode</span>
-          <ModeToggle />
+          <div className="flex items-center gap-1.5">
+            <a
+              href="https://github.com/richardokonicha/sekkei-house"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub repository"
+              className="inline-flex h-8 w-8 items-center justify-center rounded-lg text-zinc-500 transition-colors hover:bg-zinc-100 hover:text-zinc-900 dark:hover:bg-zinc-900 dark:hover:text-zinc-50"
+            >
+              <Github className="h-4 w-4" />
+            </a>
+            <ModeToggle />
+          </div>
         </div>
       </div>
     </aside>

@@ -2,6 +2,8 @@
 
 A local-first, GitHub-backed design bookmark directory for UI components, motion, visuals, and inspiration. Built on Next.js (App Router) with a DesignBookmark-inspired browsing experience: searchable/filterable cards, in-place dialog previews, code view, fullscreen, and direct GitHub source links.
 
+**Live demo:** [sekkei-house.vercel.app](https://sekkei-house.vercel.app) · **Repo:** [github.com/richardokonicha/sekkei-house](https://github.com/richardokonicha/sekkei-house)
+
 > Supabase/auth/submit/data-enrichment code from the original Cult Directory template is **preserved in the codebase** but kept dormant behind a feature flag in local mode.
 
 ## Features

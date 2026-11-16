@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import Link from "next/link"
 import { usePathname, useSearchParams } from "next/navigation"
 import { motion, useReducedMotion } from "framer-motion"
-import { Box, Home, Menu, Search } from "lucide-react"
+import { Box, Github, Home, Menu, Search } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { ModeToggle } from "@/app/providers"
@@ -84,6 +84,15 @@ export function MobileHeader({ categories = [], labels = [] }: { categories?: st
         </Link>
       </div>
       <div className="flex items-center gap-1">
+        <a
+          href="https://github.com/richardokonicha/sekkei-house"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub repository"
+          className="inline-flex h-9 w-9 items-center justify-center rounded-xl text-zinc-600 transition-colors hover:bg-zinc-100 dark:text-zinc-300 dark:hover:bg-zinc-900"
+        >
+          <Github className="h-4 w-4" />
+        </a>
         <ModeToggle />
       </div>
     </HeaderTag>

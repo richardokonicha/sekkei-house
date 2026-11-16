@@ -2,13 +2,20 @@ import { ReactElement } from "react"
 import { redirect } from "next/navigation"
 import { createClient } from "@/db/supabase/server"
 
+import { useLocalData } from "@/lib/local-data"
 import { FadeIn } from "@/components/cult/fade-in"
 
 import { NavSidebar } from "../../components/nav"
 import { getCachedFilters } from "../actions/cached_actions"
 import SubmitTool from "./form"
 
+export const dynamic = "force-dynamic"
+
 export default async function ProtectedSubmitPage(): Promise<ReactElement> {
+  if (useLocalData) {
+    return redirect("/products")
+  }
+
   let filters = await getCachedFilters()
   const supabase = createClient()
 
