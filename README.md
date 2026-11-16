@@ -1,6 +1,6 @@
 # Sekkei House
 
-A local-first, GitHub-backed design bookmark directory for UI components, motion, visuals, and inspiration. Built on Next.js (App Router) with a DesignBookmark-inspired browsing experience: searchable/filterable cards, in-place dialog previews, code view, fullscreen, and direct GitHub source links.
+A local-first, GitHub-backed house for art, design, and inspiration—an archive of attention. Built on Next.js (App Router) with a browsing experience for collecting and revisiting what moves you: searchable/filterable cards, in-place dialog previews, code view, fullscreen, and direct source links.
 
 **Live demo:** [sekkei-house.vercel.app](https://sekkei-house.vercel.app) · **Repo:** [github.com/richardokonicha/sekkei-house](https://github.com/richardokonicha/sekkei-house)
 

@@ -21,8 +21,8 @@ async function Page({ searchParams }: { searchParams: { search?: string } }) {
       <ResourceCardGrid sortedData={data} filteredFeaturedData={null}>
         <div className="space-y-5">
           <PageHeader
-            title="Motion & components"
-            description="Live component bookmarks you can preview, inspect, and remix. Click any card to expand, view source, or go full screen."
+            title="An archive of attention"
+            description="A quiet house for gathering art, design, and fragments of inspiration—held beyond medium or category, to be seen and returned to."
           />
           <DirectorySearch />
           <FilterPills categories={filters.categories} />

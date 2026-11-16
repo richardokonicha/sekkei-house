@@ -20,7 +20,7 @@ export const metadata = {
   metadataBase: new URL(defaultUrl),
   title: "Sekkei House",
   description:
-    "A local-first, GitHub-backed design bookmark directory for UI components, motion, visuals, and inspiration.",
+    "A local-first, GitHub-backed house for art, design, and inspiration—an archive of attention.",
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {

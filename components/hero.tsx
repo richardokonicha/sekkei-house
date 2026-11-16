@@ -20,8 +20,8 @@ export function Hero({ children }: { children?: React.ReactNode }) {
       </div>
       <div className="flex flex-col items-center md:items-start">
         <p className="max-w-xl text-center text-base font-medium text-zinc-700 dark:text-zinc-300 md:text-left md:text-lg">
-          A free, local-first treasury of UI inspiration, components, brand visuals,
-          motion, and playful graphics. Browse, preview, and remix without friction.
+          A local-first house for what stirs the eye and mind—art, design, objects,
+          and fragments of inspiration, gathered here to be kept close and seen again.
         </p>
       </div>
       <div className="mt-2 flex flex-wrap items-center gap-3">
