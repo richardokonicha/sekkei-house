@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fde047"/><stop offset="1" stop-color="#fb7185"/></linearGradient></defs>
+  <rect width="1200" height="800" fill="#111827"/>
+  <rect x="40" y="40" width="1120" height="720" rx="48" fill="url(#g)" opacity="0.18"/>
+  <circle cx="260" cy="240" r="90" fill="#fde047" opacity="0.9"/>
+  <rect x="390" y="180" width="420" height="44" rx="22" fill="#f8fafc" opacity="0.9"/>
+  <rect x="390" y="250" width="520" height="28" rx="14" fill="#cbd5e1" opacity="0.8"/>
+  <rect x="120" y="420" width="960" height="220" rx="28" fill="#0f172a" stroke="#334155"/>
+  <text x="120" y="700" font-family="Arial, sans-serif" font-size="52" fill="#e2e8f0">Sekkei House Sample</text>
+</svg>

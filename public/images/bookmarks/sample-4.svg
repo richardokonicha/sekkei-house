@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <rect width="1200" height="800" fill="#18181b"/>
+  <rect x="90" y="90" width="1020" height="620" rx="30" fill="#09090b" stroke="#27272a"/>
+  <rect x="90" y="90" width="1020" height="56" rx="30" fill="#27272a"/>
+  <circle cx="140" cy="118" r="10" fill="#fb7185"/><circle cx="175" cy="118" r="10" fill="#facc15"/><circle cx="210" cy="118" r="10" fill="#4ade80"/>
+  <text x="140" y="220" font-family="monospace" font-size="34" fill="#a78bfa">const card = () =&gt; (</text>
+  <text x="140" y="280" font-family="monospace" font-size="34" fill="#e4e4e7">  &lt;Button variant="ghost" /&gt;</text>
+  <text x="140" y="340" font-family="monospace" font-size="34" fill="#a78bfa">)</text>
+  <text x="140" y="460" font-family="Arial, sans-serif" font-size="40" fill="#fafafa">Component Preview</text>
+</svg>

@@ -1,0 +1,142 @@
+[
+  {
+    "id": "11111111-1111-4111-8111-111111111111",
+    "created_at": "2026-11-10T12:00:00.000Z",
+    "full_name": "Sekkei House",
+    "email": "local@sekkei.house",
+    "twitter_handle": "sekkei_house",
+    "product_website": "https://ui.shadcn.com",
+    "codename": "shadcn-ui-patterns",
+    "punchline": "Composable UI component inspiration",
+    "description": "A curated set of clean component compositions, layout primitives, and interaction patterns to copy, remix, and preview in your own projects.",
+    "logo_src": "/images/bookmarks/sample-3.svg",
+    "user_id": "00000000-0000-0000-0000-000000000000",
+    "tags": [
+      "components",
+      "tailwind",
+      "react"
+    ],
+    "view_count": 128,
+    "approved": true,
+    "featured": false,
+    "labels": [
+      "ui-inspiration",
+      "copy-ready"
+    ],
+    "categories": "Code / Components",
+    "component_path": "components/bookmarks/shadcn-ui-patterns.tsx",
+    "github_url": "https://github.com/sekkei-house/sekkei-house/blob/main/components/bookmarks/shadcn-ui-patterns.tsx"
+  },
+  {
+    "id": "22222222-2222-4222-8222-222222222222",
+    "created_at": "2026-11-11T09:30:00.000Z",
+    "full_name": "Sekkei House",
+    "email": "local@sekkei.house",
+    "twitter_handle": "sekkei_house",
+    "product_website": "https://linear.app",
+    "codename": "linear-brand-moodboard",
+    "punchline": "Crisp product and brand direction",
+    "description": "Visual references for modern SaaS branding: typography, spacing, dark surfaces, gradients, and product storytelling that feels precise and premium.",
+    "logo_src": "/images/bookmarks/sample-1.svg",
+    "user_id": "00000000-0000-0000-0000-000000000000",
+    "tags": [
+      "branding",
+      "typography",
+      "saas"
+    ],
+    "view_count": 96,
+    "approved": true,
+    "featured": true,
+    "labels": [
+      "brand",
+      "visuals"
+    ],
+    "categories": "Visual / Brand",
+    "component_path": "components/bookmarks/linear-brand-moodboard.tsx",
+    "github_url": "https://github.com/sekkei-house/sekkei-house/blob/main/components/bookmarks/linear-brand-moodboard.tsx"
+  },
+  {
+    "id": "33333333-3333-4333-8333-333333333333",
+    "created_at": "2026-11-12T15:45:00.000Z",
+    "full_name": "Sekkei House",
+    "email": "local@sekkei.house",
+    "twitter_handle": "sekkei_house",
+    "product_website": "https://www.manim.community",
+    "codename": "manim-motion-studies",
+    "punchline": "Math animations you can study and reuse",
+    "description": "Scene ideas, easing references, and motion breakdowns for explanatory math visuals, transitions, and educational animation sequences.",
+    "logo_src": "/images/bookmarks/sample-2.svg",
+    "user_id": "00000000-0000-0000-0000-000000000000",
+    "tags": [
+      "animation",
+      "math",
+      "motion"
+    ],
+    "view_count": 74,
+    "approved": true,
+    "featured": false,
+    "labels": [
+      "motion",
+      "education"
+    ],
+    "categories": "Motion / Math",
+    "component_path": "components/bookmarks/manim-motion-studies.tsx",
+    "github_url": "https://github.com/sekkei-house/sekkei-house/blob/main/components/bookmarks/manim-motion-studies.tsx"
+  },
+  {
+    "id": "44444444-4444-4444-8444-444444444444",
+    "created_at": "2026-11-13T18:10:00.000Z",
+    "full_name": "Sekkei House",
+    "email": "local@sekkei.house",
+    "twitter_handle": "sekkei_house",
+    "product_website": "https://github.com/nolly-studio/cult-directory-template",
+    "codename": "cult-directory-remix-notes",
+    "punchline": "Template patterns for a design archive",
+    "description": "Implementation notes and reusable snippets inspired by the Cult Directory template: cards, filters, directory layout, and content-driven browsing.",
+    "logo_src": "/images/bookmarks/sample-4.svg",
+    "user_id": "00000000-0000-0000-0000-000000000000",
+    "tags": [
+      "nextjs",
+      "supabase",
+      "directory"
+    ],
+    "view_count": 52,
+    "approved": true,
+    "featured": false,
+    "labels": [
+      "code",
+      "template"
+    ],
+    "categories": "Code / Components",
+    "component_path": "components/bookmarks/cult-directory-remix-notes.tsx",
+    "github_url": "https://github.com/sekkei-house/sekkei-house/blob/main/components/bookmarks/cult-directory-remix-notes.tsx"
+  },
+  {
+    "id": "55555555-5555-4555-8555-555555555555",
+    "created_at": "2026-11-14T08:20:00.000Z",
+    "full_name": "Sekkei House",
+    "email": "local@sekkei.house",
+    "twitter_handle": "sekkei_house",
+    "product_website": "https://dribbble.com",
+    "codename": "playful-cartoon-graphics",
+    "punchline": "Character, color, and illustration sparks",
+    "description": "A playful collection of cartoon frames, character poses, poster palettes, and graphic motifs for fast visual exploration and remixing.",
+    "logo_src": "/images/bookmarks/sample-5.svg",
+    "user_id": "00000000-0000-0000-0000-000000000000",
+    "tags": [
+      "illustration",
+      "cartoon",
+      "color"
+    ],
+    "view_count": 61,
+    "approved": true,
+    "featured": false,
+    "labels": [
+      "graphics",
+      "inspiration"
+    ],
+    "categories": "Graphics / Illustration",
+    "component_path": "components/bookmarks/playful-cartoon-graphics.tsx",
+    "github_url": "https://github.com/sekkei-house/sekkei-house/blob/main/components/bookmarks/playful-cartoon-graphics.tsx"
+  }
+]

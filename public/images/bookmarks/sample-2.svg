@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <rect width="1200" height="800" fill="#020617"/>
+  <g stroke="#22d3ee" stroke-width="3" fill="none" opacity="0.9">
+    <circle cx="600" cy="400" r="120"/><circle cx="600" cy="400" r="220"/><circle cx="600" cy="400" r="320"/>
+    <path d="M280 400h640M600 80v640M373 173l454 454M827 173L373 627"/>
+  </g>
+  <rect x="80" y="80" width="360" height="120" rx="24" fill="#0f172a" stroke="#334155"/>
+  <text x="120" y="155" font-family="Arial, sans-serif" font-size="44" fill="#e2e8f0">Math Motion</text>
+</svg>
