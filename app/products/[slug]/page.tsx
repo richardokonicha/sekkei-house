@@ -20,7 +20,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
   return (
     <>
       <NavSidebar categories={filters.categories} labels={filters.labels} />
-      <MobileHeader />
+      <MobileHeader categories={filters.categories} labels={filters.labels} />
       <div className="min-h-screen w-full sm:pl-64">
         <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 lg:px-8">
           <Link
