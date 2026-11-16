@@ -4,8 +4,18 @@ import "server-only"
 import { cache } from "react"
 import { revalidatePath } from "next/cache"
 import { createClient } from "@/db/supabase/server"
+import {
+  getLocalBookmarkById,
+  getLocalFilters,
+  searchLocalBookmarks,
+  useLocalData,
+} from "@/lib/local-data"
 
 export async function getFilters() {
+  if (useLocalData) {
+    return getLocalFilters()
+  }
+
   const db = createClient()
   const { data: categoriesData, error: categoriesError } = await db
     .from("products")
@@ -31,8 +41,8 @@ export async function getFilters() {
 
   return {
     categories: categoriesData.map((item) => item.categories).filter(Boolean),
-    labels: labelsData.map((item) => item.labels).filter(Boolean),
-    tags: tagsData.map((item) => item.tags).filter(Boolean),
+    labels: labelsData.flatMap((item) => item.labels ?? []).filter(Boolean),
+    tags: tagsData.flatMap((item) => item.tags ?? []).filter(Boolean),
   }
 }
 
@@ -43,6 +53,10 @@ export const getProducts = cache(
     label?: string,
     tag?: string
   ) => {
+    if (useLocalData) {
+      return searchLocalBookmarks(searchTerm, category, label, tag)
+    }
+
     const db = createClient()
     let query = db.from("products").select("*")
 
@@ -76,6 +90,10 @@ export const getProducts = cache(
 )
 
 export async function getProductById(id?: string) {
+  if (useLocalData) {
+    return getLocalBookmarkById(id)
+  }
+
   const supabase = createClient()
 
   const { data, error } = await supabase
@@ -87,11 +105,15 @@ export async function getProductById(id?: string) {
     return []
   }
 
-  console.log(data)
   return data
 }
 
 export async function incrementClickCount(id: string) {
+  if (useLocalData) {
+    // Local mode has no persistent DB writes; keep UI behavior no-op.
+    return
+  }
+
   const supabase = createClient()
 
   const { data, error } = await supabase.rpc("increment_product_view_count", {

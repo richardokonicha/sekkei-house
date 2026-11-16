@@ -5,27 +5,28 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  // "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
-  // {
-  "",
+  "inline-flex items-center justify-center whitespace-nowrap rounded-full border-2 border-zinc-950 text-sm font-extrabold tracking-tight transition-[transform,box-shadow,background-color,color] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:border-zinc-100 active:translate-x-[2px] active:translate-y-[2px]",
   {
     variants: {
       variant: {
         default:
-          "bg-gradient-to-b dark:from-white dark:to-gray-50 dark:text-black/80 from-[#303030] to-gray-950 text-white/90 border-[1px] border-black/30 dark:hover:text-black hover:text-white",
+          "bg-purple-500 text-white shadow-[4px_4px_0px_0px_#09090B] hover:bg-purple-400 hover:shadow-[6px_6px_0px_0px_#09090B] active:shadow-[1px_1px_0px_0px_#09090B] dark:bg-purple-400 dark:text-zinc-950 dark:shadow-[4px_4px_0px_0px_#A855F7] dark:hover:shadow-[6px_6px_0px_0px_#C084FC] dark:active:shadow-[1px_1px_0px_0px_#C084FC]",
         destructive:
-          "bg-destructive text-destructive-foreground  hover:bg-destructive/90",
-        outline: " bg-background  hover:bg-accent hover:text-accent-foreground",
+          "bg-red-500 text-white shadow-[4px_4px_0px_0px_#09090B] hover:bg-red-400",
+        outline:
+          "bg-white text-zinc-950 shadow-[4px_4px_0px_0px_#09090B] hover:bg-purple-100 dark:bg-zinc-900 dark:text-zinc-50 dark:shadow-[4px_4px_0px_0px_#A855F7]",
         secondary:
-          "bg-gradient-to-b from-white to-gray-50 text-black/80 dark:from-[#303030] dark:to-gray-950 dark:text-white/90 dark:border-[1px] dark:border-black/30 hover:text-black dark:hover:text-white",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
+          "bg-yellow-400 text-zinc-950 shadow-[4px_4px_0px_0px_#09090B] hover:bg-yellow-300 dark:shadow-[4px_4px_0px_0px_#A855F7]",
+        ghost:
+          "border-transparent bg-transparent shadow-none hover:border-zinc-950 hover:bg-purple-100 hover:shadow-[3px_3px_0px_0px_#09090B] dark:hover:border-zinc-100 dark:hover:bg-zinc-800",
+        link:
+          "border-transparent bg-transparent shadow-none underline-offset-4 hover:underline active:translate-x-0 active:translate-y-0",
       },
       size: {
-        default: "h-9 px-4 py-2",
-        sm: "h-8 rounded-md px-3 text-xs",
-        lg: "h-10 rounded-md px-8",
-        icon: "h-9 w-9",
+        default: "h-10 px-5 py-2",
+        sm: "h-8 px-3 text-xs",
+        lg: "h-11 px-8 text-base",
+        icon: "h-10 w-10",
       },
     },
     defaultVariants: {
@@ -46,18 +47,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const Comp = asChild ? Slot : "button"
     return (
       <Comp
-        className={cn(
-          buttonVariants({ variant, size }),
-          "relative inline-flex items-center px-4 py-2 group",
-          "text-base font-medium leading-6 rounded-[9px]",
-          "shadow-[0_0_0_1px_rgba(0,0,0,0.1)_inset,0_0.5px_0.5px_rgba(0,0,0,0.05)_inset,0_-0.5px_0.5px_rgba(0,0,0,0.05)_inset,0_1px_2px_rgba(0,0,0,0.1)]",
-          "dark:shadow-[0_0_0_0.5px_rgba(255,255,255,0.06)_inset,0_0.5px_0.5px_rgba(255,255,255,0.1)_inset,0_-0.5px_0.5px_rgba(255,255,255,0.1)_inset,0_0.5px_1px_rgba(0,0,0,0.3),0_1px_2px_rgba(0,0,0,0.4)]",
-          "dark:hover:shadow-[0_0_0_0.5px_rgba(255,255,255,0.1)_inset,0_0.5px_0.5px_rgba(255,255,255,0.1)_inset,0_-0.5px_0.5px_rgba(255,255,255,0.1)_inset,0_0.5px_1px_rgba(0,0,0,0.4),0_1px_2px_rgba(0,0,0,0.5)]",
-          "focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500/20",
-          "disabled:opacity-50 disabled:cursor-not-allowed",
-          className
-        )}
-        style={{ backgroundClip: "padding-box" }}
+        className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
         {...props}
       />

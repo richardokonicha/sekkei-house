@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "cult-admin-directory-template",
+  "name": "sekkei-house",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

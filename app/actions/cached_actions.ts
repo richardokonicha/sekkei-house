@@ -3,6 +3,7 @@
 import "server-only"
 import { unstable_cache } from "next/cache"
 import { createClient } from "@supabase/supabase-js"
+import { getLocalFilters, useLocalData } from "@/lib/local-data"
 
 type FilterData = {
   categories: string[]
@@ -22,11 +23,16 @@ type TagData = {
   name: string
 }
 
-const client = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-)
 async function getFilters(): Promise<FilterData> {
+  if (useLocalData) {
+    return getLocalFilters()
+  }
+
+  const client = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  )
+
   const { data: categoriesData, error: categoriesError } = await client
     .from("categories")
     .select("name")

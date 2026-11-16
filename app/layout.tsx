@@ -13,36 +13,20 @@ export const fontSans = localFont({
 })
 
 const defaultUrl = process.env.VERCEL_URL
-  ? `https://www.nextjs.design`
+  ? `https://${process.env.VERCEL_URL}`
   : "http://localhost:3000"
 
 export const metadata = {
   metadataBase: new URL(defaultUrl),
-  title: "Design x Engineering Directory - Discover Top Web Dev Tools",
+  title: "Sekkei House",
   description:
-    "Explore a curated directory of free web development tools for designers and engineers. Find resources for JavaScript, Tailwind CSS, and more!",
-  keywords:
-    "Design, Engineering, Web Development, JavaScript, Tailwind CSS, Supabase, Free Tools, Design Engineering",
-  structuredData: {
-    "@context": "http://schema.org",
-    "@type": "WebSite",
-    name: "Design x Engineering Directory",
-    url: "https://www.nextjs.design/",
-    description:
-      "A free directory of awesome web development tools for design and engineering professionals.",
-  },
-  socialMediaTags: {
-    "og:title": "Design x Engineering Directory - Discover Top Web Dev Tools",
-    "og:description":
-      "Explore a curated directory of free web development tools for designers and engineers. Find resources for JavaScript, Tailwind CSS, and more!",
-    "twitter:card": "summary_large_image",
-  },
+    "A local-first, GitHub-backed design bookmark directory for UI components, motion, visuals, and inspiration.",
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={`${fontSans.variable} font-sans  `}>
-      <body>
+    <html lang="en" className={`${fontSans.variable} font-sans`} suppressHydrationWarning>
+      <body className="min-h-screen bg-[#FAFAFA] text-zinc-950 antialiased selection:bg-zinc-900 selection:text-white dark:bg-[#09090B] dark:text-zinc-50 dark:selection:bg-zinc-100 dark:selection:text-zinc-900">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -50,8 +34,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           disableTransitionOnChange
         >
           <TooltipProvider>
-            <main className="bg-[#FAFAFA] dark:bg-background  text-foreground flex flex-col justify-center items-center w-full pt-13">
-              <div className=" w-full ">{children}</div>
+            <main className="flex min-h-screen w-full flex-col items-center justify-start">
+              <div className="w-full">{children}</div>
             </main>
           </TooltipProvider>
           <Toaster richColors />
