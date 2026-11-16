@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState } from "react"
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion"
+import { motion, useReducedMotion } from "framer-motion"
 import { Maximize2, X } from "lucide-react"
 
 import { cn } from "@/lib/utils"
@@ -102,22 +102,30 @@ export const ResourceCard = React.forwardRef<HTMLElement, { data: Bookmark; orde
         </motion.article>
 
         <Dialog open={open} onOpenChange={setOpen}>
-          <AnimatePresence>
-            {open ? (
-              <DialogContent hideClose className="max-w-5xl overflow-hidden border-zinc-200/80 bg-transparent p-0 shadow-none sm:rounded-[24px]">
-                <motion.div initial={shouldReduceMotion ? false : { opacity: 0, scale: 0.98, y: 8 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, scale: 0.98, y: 8 }} transition={{ duration: 0.25, ease }} className="relative">
-                  <DialogTitle className="sr-only">{data.codename}</DialogTitle>
-                  <DialogDescription className="sr-only">{data.punchline || data.description}</DialogDescription>
-                  <DialogClose asChild>
-                    <motion.button type="button" whileTap={shouldReduceMotion ? undefined : { scale: 0.96 }} className="absolute right-3 top-3 z-10 inline-flex h-9 w-9 items-center justify-center rounded-xl border border-zinc-200/80 bg-white/90 text-zinc-500 shadow-sm backdrop-blur transition-colors hover:bg-white hover:text-zinc-900 dark:border-zinc-700 dark:bg-zinc-950/90 dark:text-zinc-400 dark:hover:bg-zinc-900 dark:hover:text-zinc-100" aria-label="Close">
-                      <X className="h-4 w-4" />
-                    </motion.button>
-                  </DialogClose>
-                  <BookmarkPreview bookmark={data} className="max-h-[88vh] bg-white shadow-2xl shadow-zinc-900/10 dark:bg-zinc-950 dark:shadow-black/50" />
-                </motion.div>
-              </DialogContent>
-            ) : null}
-          </AnimatePresence>
+          <DialogContent
+            hideClose
+            className="w-[calc(100vw-0.75rem)] max-w-5xl gap-0 overflow-hidden border-none bg-transparent p-0 shadow-none sm:w-[calc(100vw-2rem)]"
+          >
+            <DialogTitle className="sr-only">{data.codename}</DialogTitle>
+            <DialogDescription className="sr-only">
+              {data.punchline || data.description}
+            </DialogDescription>
+            <div className="relative flex max-h-[calc(100dvh-0.75rem)] flex-col sm:max-h-[92dvh]">
+              <DialogClose asChild>
+                <button
+                  type="button"
+                  className="absolute right-2 top-2 z-10 inline-flex h-9 w-9 items-center justify-center rounded-xl border border-zinc-200/80 bg-white/95 text-zinc-500 shadow-sm backdrop-blur transition-colors hover:bg-white hover:text-zinc-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:border-zinc-700 dark:bg-zinc-950/95 dark:text-zinc-400 dark:hover:bg-zinc-900 dark:hover:text-zinc-100 sm:right-3 sm:top-3"
+                  aria-label="Close dialog"
+                >
+                  <X className="h-4 w-4" />
+                </button>
+              </DialogClose>
+              <BookmarkPreview
+                bookmark={data}
+                className="max-h-[calc(100dvh-0.75rem)] shadow-2xl shadow-zinc-900/10 dark:shadow-black/50 sm:max-h-[92dvh]"
+              />
+            </div>
+          </DialogContent>
         </Dialog>
       </>
     )

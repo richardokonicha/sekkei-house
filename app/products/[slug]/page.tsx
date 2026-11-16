@@ -22,16 +22,16 @@ export default async function ProductPage({ params }: { params: { slug: string }
       <NavSidebar categories={filters.categories} labels={filters.labels} />
       <MobileHeader categories={filters.categories} labels={filters.labels} />
       <div className="min-h-screen w-full sm:pl-64">
-        <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl px-3 py-4 sm:px-6 sm:py-6 lg:px-8">
           <Link
             href="/products"
-            className="mb-5 inline-flex items-center gap-1.5 text-sm font-medium text-zinc-500 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+            className="mb-4 inline-flex items-center gap-1.5 text-sm font-medium text-zinc-500 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 sm:mb-5"
           >
             <ArrowLeft className="h-4 w-4" /> Back to directory
           </Link>
-          <div className="space-y-6">
-            <BookmarkPreview bookmark={product} className="min-h-[70vh]" />
-            <div className="grid gap-4 rounded-2xl border border-zinc-200/80 bg-white p-5 dark:border-zinc-800 dark:bg-zinc-950 sm:grid-cols-3">
+          <div className="space-y-5 sm:space-y-6">
+            <BookmarkPreview bookmark={product} className="min-h-[60dvh] sm:min-h-[70vh]" />
+            <div className="grid gap-4 rounded-2xl border border-zinc-200/80 bg-white p-4 dark:border-zinc-800 dark:bg-zinc-950 sm:grid-cols-3 sm:p-5">
               <div className="sm:col-span-2">
                 <p className="text-xs font-medium uppercase tracking-wide text-zinc-400">Description</p>
                 <p className="mt-2 text-sm leading-relaxed text-zinc-700 dark:text-zinc-300">{product.description}</p>
